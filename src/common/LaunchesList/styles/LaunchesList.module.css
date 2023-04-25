@@ -1,0 +1,39 @@
+.list {
+  display: grid;
+  place-items: center;
+  grid-auto-flow: row;
+  row-gap: 16px;
+  width: 100vW;
+}
+
+.button {
+  background-color: #313131;
+  border: none;
+  border-radius: var(--border-radius);
+  height: 72px;
+  width: 45%;
+  font-size: 24px;
+  transition: linear .2s;
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: .7;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .button {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .button {
+    width: 50%;
+  }
+}
