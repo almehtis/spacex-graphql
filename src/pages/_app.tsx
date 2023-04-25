@@ -2,11 +2,10 @@ import { Layout } from '@/common/Layout';
 import { CookiesProvider } from 'react-cookie';
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ApolloClient, ApolloProvider, InMemoryCache, makeVar } from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import localFont from '@next/font/local'
 
 const PTRoot = localFont({src: './fonts/pt-root.woff2'})
-export const bookmarksVar = makeVar<string[]>([])
 
 const client = new ApolloClient({
   uri: "https://spacex-production.up.railway.app/",
